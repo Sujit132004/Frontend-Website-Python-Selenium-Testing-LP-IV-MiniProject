@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Web Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 id="main-title">Hello, World!</h1>
+  
+  <button id="myButton">Click Me!</button>
+  <button id="hoverButton">Hover Me!</button>
+  
+  <p id="result"></p>
+  <p id="hover-result"></p>
+
+  <script>
+    document.getElementById('myButton').onclick = function() {
+      document.getElementById('result').innerText = "Button Clicked!";
+    }
+
+    document.getElementById('hoverButton').onmouseover = function() {
+      document.getElementById('hover-result').innerText = "Hover Detected!";
+      document.getElementById('hoverButton').style.backgroundColor = "lightgreen";
+    }
+  </script>
+</body>
+</html>
