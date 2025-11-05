@@ -1,23 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple Web Page</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 id="main-title">Hello, World!</h1>
-  
-  <button id="myButton">Click Me!</button>
-  <button id="hoverButton">Hover Me!</button>
-  
-  <p id="result"></p>
-  <p id="hover-result"></p>
+  <header>
+    <h1 id="main-title">Hello, World!</h1>
+    <p class="subtitle">Welcome to the STQA Mini Project Demo</p>
+  </header>
+
+  <main>
+    <section class="interactive-section">
+      <h2>🎯 Interactive Elements</h2>
+      <p>Test out the interactive buttons below. These actions will be verified by automated Selenium test cases.</p>
+      
+      <div class="button-group">
+        <button id="myButton">Click Me!</button>
+        <button id="hoverButton">Hover Me!</button>
+      </div>
+      
+      <div class="results">
+        <p id="result"></p>
+        <p id="hover-result"></p>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>💡 About This Project</h2>
+      <p>
+        This project demonstrates the use of <strong>Software Testing and Quality Assurance (STQA)</strong> concepts through 
+        <strong>automated testing</strong> with <em>Selenium WebDriver</em>. The webpage elements are tested for correct behavior, 
+        interactions, and UI updates.
+      </p>
+      <p>
+        Using Python, we automate checking button clicks, hover events, and text updates — ensuring all functionalities behave as expected.
+      </p>
+    </section>
+
+    <section class="features">
+      <h2>⚙️ Features Tested</h2>
+      <ul>
+        <li>Heading text verification</li>
+        <li>Button visibility and functionality</li>
+        <li>Hover color change detection</li>
+        <li>Dynamic text updates after actions</li>
+        <li>Page title correctness</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ for the STQA Mini Project | 2025</p>
+  </footer>
 
   <script>
+    // Button Click Functionality
     document.getElementById('myButton').onclick = function() {
       document.getElementById('result').innerText = "Button Clicked!";
     }
 
+    // Hover Functionality
     document.getElementById('hoverButton').onmouseover = function() {
       document.getElementById('hover-result').innerText = "Hover Detected!";
       document.getElementById('hoverButton').style.backgroundColor = "lightgreen";
